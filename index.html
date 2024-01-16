@@ -6,24 +6,79 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Noto Sans KR Regular'),
+                url(woff2-font-path) format('woff2'),
+                url(woff-font-path) format('woff');
+        }
+        
         * {
-            font-family: "맑은 고딕";
+            font-family: 'Nato Sans KR';
+        }
+
+        body {
+            background-color: skyblue;
         }
     </style>
 </head>
 <body>
-    <nav class="w-full h-16">
-        <div class="w-full h-full grid justify-item-stretch">
-            <div class="justify-self-start">
-                <div class="p-4"><a href="#">CREAYON</a></div>
+    <div class="w-full min-h-screen flex flex-col">
+        <header class="w-full h-16 bg-white drop-shadow-sm">
+            <div class="container mx-auto h-full grid grid-flow-col justify-item-stretch text-gray-700">
+                <div class="justify-self-start flex text-lg">
+                    <div class="flex p-4 gap-2">
+                        <div class="flex justify-center items-center"><a href="#"><img src="https://placehold.co/30x30" alt="logo"/></a></div>
+                        <div class="flex justify-center items-center hover:text-gray-900 transition-all duration-300 leading-8 font-bold"><a href="#">CREAYON</a></div>
+                    </div>
+                </div>
+                <nav class="justify-self-end flex gap-2 text-lg">
+                    <div class="flex justify-center items-center"><a class="p-4 h-full hover:text-gray-900 hover:bg-gray-300 transition-all duration-300 leading-8" href="#">About</a></div>
+                    <div class="flex justify-center items-center"><a class="p-4 h-full hover:text-gray-900 hover:bg-gray-300 transition-all duration-300 leading-8" href="#">FAQ</a></div>
+                    <div class="flex justify-center items-center"><a class="p-4 h-full hover:text-gray-900 hover:bg-gray-300 transition-all duration-300 leading-8" href="#">Contact Us</a></div>
+                </nav>
             </div>
-            <div class="justify-self-auto"></div>
-            <div class="justify-self-end flex gap-2">
-                <div class="p-4"><a href="#">About</a></div>
-                <div class="p-4"><a href="#">FAQ</a></div>
-                <div class="p-4"><a href="#">Contact Us</a></div>
-            </div>
+        </header>
+
+        <div class="w-full flex-grow">
+            <article class="w-full bg-neutral-200">
+                <div class="container mx-auto">
+                    <div class="text-center py-24">
+                        <h1 class="tracking-tight font-extrabold text-gray-900 text-6xl">
+                          Unleash Your Imagination
+                          <br/>
+                          with <span class="text-orange-600">CREAYON</span>
+                        </h1>
+                        <p class="mt-3 mx-auto text-base text-gray-500 text-xl">
+                          CREAYON offers interactive storytelling experience with ChatGPT
+                          <br/>
+                          Create your own narrative in an interactive and engaging environment
+                        </p>
+                        <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                            <div class="rounded-md shadow">
+                                <a class="block" href="#"><button class="bg-indigo-600 hover:bg-indigo-700 text-xl text-white py-3 px-6 rounded-md transition-all duration-300">Get Started</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="w-full bg-neutral-300">
+                <div class="container mx-auto">
+                    <div class="text-center">
+                        <h1 class="text-4xl">Popular Stories</h1>
+                    </div>
+                </div>
+            </article>
         </div>
-    </nav>
+        
+        <footer class="bg-white">
+            <div class="container mx-auto py-12 px-4">
+                <p class="text-center text-base text-gray-400">© 2023 Image Creator. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
